@@ -118,6 +118,32 @@ else{
 echo $result;
 
 
+$nombre = 'form_entries_all.json';
+$file = $path . $nombre;
+$array_entries_all_merged = array_merge($array_entries_particulares, $array_entries_distribuidores,$array_entries_emajadores);
+
+$count_entries_all = 0;
+foreach($array_entries_all_merged as $entry){
+    $array_entries_all[$entry[20]] = $entry;
+    $count_entries_all++;
+}
+
+
+
+if($count_entries_all){
+    $fp = fopen($file, 'w');
+    fwrite($fp, json_encode($array_entries_all));
+    fclose($fp);
+    $result =  "<h3>Todas las entradas</h3> <hr />";
+    $result .= '<div class="alert alert-black">Se han generado ' . $count_entries_all . ' entradas </div>';
+}
+else{
+    $result = '<div class="alert alert-black">No se han generado entradas </div>';
+}
+
+echo $result;
+
+
 
 ?>
 
