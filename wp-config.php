@@ -26,7 +26,7 @@ define( 'DB_NAME', 'speedon_sat' );
 define( 'DB_USER', 'speedon_sat' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'Y9B#^dDY1&0N' );
+define( 'DB_PASSWORD', 's@t#sPx0nl1n3&' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
