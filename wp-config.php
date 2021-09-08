@@ -77,7 +77,27 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
+
+ 
+ // Activar modo WP_DEBUG para mostrar errores
+//ini_set('error_reporting', E_ALL ^ E_NOTICE);
+define('WP_DEBUG', false);    
+
+// Volcar los errores en el archivo /wp-content/debug.log
+define('WP_DEBUG_LOG', true);
+
+// No mostrar errores y avisos en pantalla y seguir la carga de pagina
+define('WP_DEBUG_DISPLAY', false);
+
+//Desactivamos actualizacions automáticas de plugins y plantillas
+define('AUTOMATIC_UPDATER_DISABLED', true);
+
+//Desactivamos actualizaciones automáticas del wordpress
+define( 'WP_AUTO_UPDATE_CORE', false );
+
+
+define('WP_POST_REVISIONS', true);
+
 
 /* That's all, stop editing! Happy publishing. */
 
